@@ -8,4 +8,5 @@ func main() {
 	fmt.Println("Enter first name:")
 	fmt.Scan(&username)
 	fmt.Printf("print your username %v, and the type is %T", username, username)
+	fmt.Print("test commit")
 }
