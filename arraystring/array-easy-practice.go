@@ -47,8 +47,41 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ***/
 
-package leetcodearraystring
+package arraystring
+
+import "fmt"
 
 func removeElement(nums []int, val int) int {
-	return 0
+    if len(nums) == 0 {
+        return 0
+    }
+
+    index := 0  //for record curr point
+
+    /* first way to replace the element */
+	// for i:=0; i<len(nums); i++ {
+    //     if nums[i] != val {
+    //         nums[index] = nums[i]
+    //         index ++
+    //     }
+    // }
+    
+    for i:=0; i<len(nums)-1; i++ {
+        if nums[i] != val {
+            if i != index {
+                nums[i], nums[index] = nums[index], nums[i]
+            }
+            index ++
+        }
+    }
+    return index
+}
+
+
+func TestRemove() {
+    nums := []int{3,2,2,3}
+    val := 3
+
+    fmt.Println(removeElement(nums, val))
+    fmt.Println(nums)
 }
