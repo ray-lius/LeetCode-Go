@@ -162,7 +162,29 @@ func isSameArray(a []int, b[]int) bool {
 }
 
 
-// best solution
+func threeSum3(nums []int, target int) [][]int {
+
+	res := [][]int{}
+	// first step: reduce and count the val
+	counter := map[int]int{}
+	for _, val := range nums {
+		counter[val]++
+	}
+	uniqNums := []int{}
+	for key := range counter {
+		uniqNums = append(uniqNums, key)
+	}
+	sort.Ints(uniqNums)
+	
+	// second step: find the comb using two for loop!!!!!
+
+	return res
+}
+
+
+
+
+// best solution O(nlogn)
 func threeSum2(nums []int, target int) [][]int {
 	sort.Ints(nums)
 	res := [][]int{}
@@ -199,9 +221,13 @@ func threeSum2(nums []int, target int) [][]int {
 	return res
 }
 
+
+
+
 func TestCase(){
 	nums := []int{-1,0,1,2,-1,-4}
 
 	fmt.Println(threeSum1(nums, 0))
 	fmt.Println(threeSum2(nums, 0))
+	fmt.Println(threeSum3(nums, 0))
 }
