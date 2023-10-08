@@ -34,7 +34,7 @@ Constraints:
 
 */
 
-package arraystring
+package ArrayString
 
 import "fmt"
 
@@ -51,6 +51,9 @@ func rotateArray2(nums []int, k int) {
 	reverseArray(nums[:k])
 	reverseArray(nums[k:])
 }
+
+
+/* reverse a array */
 
 func reverseArray(nums []int){
 	for i, n := 0, len(nums); i<n/2; i++ {

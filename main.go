@@ -1,13 +1,15 @@
 package main
 
 import (
-	"leetcodego/arraystring"
+	"leetcodego/TwoPoint"
 )
 
 func main() {
 
 	// arraystring.TestMerge()
 	// arraystring.TestRemove()
-	arraystring.TestRemoveDuplciate()
-	arraystring.TestRotateArray()
+	// ArrayString.TestRemoveDuplciate()
+	// ArrayString.TestRotateArray()
+	
+	TwoPoint.TestCase()
 }

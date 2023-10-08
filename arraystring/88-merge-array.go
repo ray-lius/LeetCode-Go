@@ -36,7 +36,7 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 *****/
 
-package arraystring
+package ArrayString
 
 import "fmt"
 
