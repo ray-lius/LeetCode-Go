@@ -25,4 +25,5 @@ func main() {
 	alist := []int{4,5,6,7}
 	result := mapper(square, alist)
 	fmt.Println(result)
+	
 }
