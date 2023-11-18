@@ -10,7 +10,7 @@ func square(num int) int {
 
 func mapper(f fn, alist []int) []int {
 	// make type, kength, and  capacity
-	a :=  make([]int, len(alist), len(alist))
+	a :=  make([]int, len(alist))
 	for index, val := range alist {
 		a[index] = f(val)
 	}
@@ -21,6 +21,7 @@ func TestCase() {
 	result := mapper(square, alist)
 	fmt.Println(result)
 }
+
 func main() {
 	alist := []int{4,5,6,7}
 	result := mapper(square, alist)

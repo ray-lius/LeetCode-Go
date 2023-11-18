@@ -3,7 +3,7 @@ package main
 import (
 	"leetcodego/ArrayString"
 	BackTracking "leetcodego/Backtracking"
-	"leetcodego/Test01"
+	Test "leetcodego/GeneralTesting"
 	"leetcodego/TwoPoint"
 )
 
@@ -18,5 +18,5 @@ func main() {
 	TwoPoint.TestCase2()
 
 	BackTracking.Test()
-	Test01.TestCase();
+	Test.TestCase();
 }
