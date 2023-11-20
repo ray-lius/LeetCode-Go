@@ -52,7 +52,6 @@ func rotateArray2(nums []int, k int) {
 	reverseArray(nums[k:])
 }
 
-
 /* reverse a array */
 
 func reverseArray(nums []int){
@@ -64,8 +63,12 @@ func reverseArray(nums []int){
 func TestRotateArray() {
 	nums1 := []int{1,2,3,4,5,6,7}
 	k1 := 3
-	// rotateArray(nums1, k1)
-
-	rotateArray2(nums1, k1)
+	
+	rotateArray(nums1, k1)
 	fmt.Println(nums1)
+
+	nums2 := []int{1,2,3,4,5,6,7}
+	k2 := 3
+	rotateArray2(nums2, k2)
+	fmt.Println(nums2)
 }

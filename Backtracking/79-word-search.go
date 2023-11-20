@@ -23,6 +23,55 @@ package BackTracking
 
 import "fmt"
 
+/*
+second try
+var direction = [][]int {
+	{-1, 0},{1, 0},{0, -1},{0, 1},
+}
+
+func isStillInboard(board [][]byte, x, y int) bool {
+	return x>=0 && y>=0 && x<len(board) && y<len(board[0])
+}
+
+func checkWord(board [][]byte, visited [][]bool, word string, nx, ny, index int) bool {
+
+	if index == len(word)-1 {
+		return board[nx][ny] == word[index]
+	}
+
+	if board[nx][ny] == word[index] {
+		for i:=0; i<4; i++ {
+			visited[nx][ny] = true
+			nx := nx + direction[i][0]
+			ny := ny + direction[i][1]
+			if  !visited[nx][ny] && isStillInboard(board, nx, ny) && checkWord(board, visited, word, nx, ny, index+1 ){
+				return true
+			}
+		}
+	}
+	return false
+}
+
+func searchWord(board [][]byte, word string) bool {
+	visited := make([][]bool, len(board))
+	for i:=0; i<len(visited); i++ {
+		visited[i] = make([]bool, len(board[0]))
+	}
+
+	for i, v := range board {
+		for j :=range v{
+			if checkWord(board, visited, word, i, j, 0) {
+				return true
+			}
+		}
+	}
+	return false
+}
+*/
+
+
+
+
 var dir = [][]int {
 	 {-1, 0},
 	 {0, -1},

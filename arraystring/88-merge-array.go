@@ -44,6 +44,29 @@ const (
 	test_nums1, test_nums2 = 1, 2
 )
 
+// totally wrong !!!!
+// func mergefun(nums1, nums2 []int, m, n int) []int {
+// 	if m == 0 {
+// 		return nums2
+// 	}
+// 	if n == 0 {
+// 		return nums1
+// 	}
+// 	for i:=0; i<n; i++ {
+// 		nums1[m+i] = nums2[i]
+// 	}
+// 	tmp := 0
+// 	for i:=1; i<m+n; i++ {
+// 		if nums1[i] < nums1[i-1] {
+// 			tmp = nums1[i]
+// 			nums1[i] = nums1[i-1]
+// 			nums1[i-1] = tmp
+// 		}
+// 	}
+// return nums1
+
+// }
+//
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	for p := m + n; m > 0 && n > 0; p-- {
 		if nums1[m-1] >= nums2[n-1] {

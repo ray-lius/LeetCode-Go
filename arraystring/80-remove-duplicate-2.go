@@ -47,6 +47,25 @@ package ArrayString
 
 import "fmt"
 
+// totally wrong
+// func slowfast(nums []int) {
+// 	slow, fast, count:= 0, 0, 0
+// 	for fast < len(nums){
+// 		if nums[slow] == nums[fast] && count<2 {
+// 			nums[slow] = nums[fast]
+// 			fast ++
+// 			slow ++
+// 		}
+// 		if nums[slow] == nums[fast]
+
+// 	}
+// }
+
+
+
+
+
+
 func removeDuplicate(nums []int) int {
 	slow := 0
 	for idx, val := range nums {

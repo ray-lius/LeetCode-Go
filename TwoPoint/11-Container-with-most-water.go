@@ -26,6 +26,23 @@ package TwoPoint
 
 import "fmt"
 
+// second practice
+func Sum3MaxArea(height []int) int {
+	left, right, maxArea := 0, len(height)-1, 0
+	for left < right {
+		area := min(height[left], height[right]) * (right-left)
+		if area > maxArea {
+			maxArea = area
+			left ++
+		}else{
+			right --
+		}
+	}
+	return maxArea
+}
+
+
+
 func maxArea(height []int) int {
 	maxArea, left, right := 0, 0, len(height)-1
 
