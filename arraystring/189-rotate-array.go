@@ -1,4 +1,5 @@
 /*
+
 189. Rotate Array
 Solved
 Medium
@@ -40,7 +41,7 @@ import "fmt"
 
 func rotateArray(nums []int, k int) {
 	newNums := make([]int, len(nums))
-	for i, v :=  range nums {
+	for i, v := range nums {
 		newNums[(i+k)%len(nums)] = v
 	}
 	copy(nums, newNums)
@@ -54,20 +55,20 @@ func rotateArray2(nums []int, k int) {
 
 /* reverse a array */
 
-func reverseArray(nums []int){
-	for i, n := 0, len(nums); i<n/2; i++ {
+func reverseArray(nums []int) {
+	for i, n := 0, len(nums); i < n/2; i++ {
 		nums[i], nums[n-1-i] = nums[n-1-i], nums[i]
 	}
 }
 
 func TestRotateArray() {
-	nums1 := []int{1,2,3,4,5,6,7}
+	nums1 := []int{1, 2, 3, 4, 5, 6, 7}
 	k1 := 3
-	
+
 	rotateArray(nums1, k1)
 	fmt.Println(nums1)
 
-	nums2 := []int{1,2,3,4,5,6,7}
+	nums2 := []int{1, 2, 3, 4, 5, 6, 7}
 	k2 := 3
 	rotateArray2(nums2, k2)
 	fmt.Println(nums2)

@@ -1,4 +1,5 @@
 /**
+
 27. Remove Element
 Solved
 Easy
@@ -52,36 +53,35 @@ package ArrayString
 import "fmt"
 
 func removeElement(nums []int, val int) int {
-    if len(nums) == 0 {
-        return 0
-    }
+	if len(nums) == 0 {
+		return 0
+	}
 
-    index := 0  //for record curr point
+	index := 0 //for record curr point
 
-    /* first way to replace the element */
+	/* first way to replace the element */
 	// for i:=0; i<len(nums); i++ {
-    //     if nums[i] != val {
-    //         nums[index] = nums[i]
-    //         index ++
-    //     }
-    // }
-    
-    for i:=0; i<len(nums)-1; i++ {
-        if nums[i] != val {
-            if i != index {
-                nums[i], nums[index] = nums[index], nums[i]
-            }
-            index ++
-        }
-    }
-    return index
+	//     if nums[i] != val {
+	//         nums[index] = nums[i]
+	//         index ++
+	//     }
+	// }
+
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] != val {
+			if i != index {
+				nums[i], nums[index] = nums[index], nums[i]
+			}
+			index++
+		}
+	}
+	return index
 }
 
-
 func TestRemove() {
-    nums := []int{3,2,2,3}
-    val := 3
+	nums := []int{3, 2, 2, 3}
+	val := 3
 
-    fmt.Println(removeElement(nums, val))
-    fmt.Println(nums)
+	fmt.Println(removeElement(nums, val))
+	fmt.Println(nums)
 }
