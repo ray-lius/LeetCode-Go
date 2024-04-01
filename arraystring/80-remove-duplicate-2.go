@@ -1,4 +1,5 @@
 /*
+
 80. Remove Duplicates from Sorted Array II
 Solved
 Medium
@@ -41,6 +42,7 @@ Input: nums = [0,0,1,1,1,1,2,3,3]
 Output: 7, nums = [0,0,1,1,2,3,3,_,_]
 Explanation: Your function should return k = 7, with the first seven elements of nums being 0, 0, 1, 1, 2, 3 and 3 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
+
 */
 
 package ArrayString
@@ -61,25 +63,20 @@ import "fmt"
 // 	}
 // }
 
-
-
-
-
-
 func removeDuplicate(nums []int) int {
 	slow := 0
 	for idx, val := range nums {
 		if idx < 2 || nums[slow-2] != val {
 			nums[slow] = val
-			slow ++
+			slow++
 		}
 	}
 	return slow
 }
 
 func TestRemoveDuplciate() {
-	nums1 := []int{1,1,1,2,2,3}
-	nums2 := []int{0,0,1,1,1,1,2,3,3}
+	nums1 := []int{1, 1, 1, 2, 2, 3}
+	nums2 := []int{0, 0, 1, 1, 1, 1, 2, 3, 3}
 
 	fmt.Println(removeDuplicate(nums1))
 	fmt.Println(nums1)
